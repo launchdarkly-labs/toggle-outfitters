@@ -57,7 +57,7 @@ const Inventory = () => {
   const client = useLDClient();
   async function experimentData() {
     if (client) {
-      client.track("Add to Cart Click", client.getContext(), 1);
+      client.track("Add to Cart Click", client.getContext());
       console.log("We're sending data to the experiment");
       client.track("storeClicks");
       client.flush();
